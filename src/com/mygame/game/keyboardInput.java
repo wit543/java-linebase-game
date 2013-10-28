@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class keyboardInput {
 	
-	public static String keyboardin() throws IOException{
+	public static String keyboardInString() throws IOException{
 		
 	     BufferedReader stdin =
 	             new BufferedReader (new
@@ -14,6 +14,16 @@ public class keyboardInput {
 	     String a = stdin.readLine();
 
 		return a;
+		
+	}
+	public static double keyboardInInt() throws IOException{
+		
+	     BufferedReader stdin =
+	             new BufferedReader (new
+	                 InputStreamReader(System.in));
+	     String a = stdin.readLine();
+	     double b = Double.parseDouble(a);
+		return b;
 		
 	}
 }
