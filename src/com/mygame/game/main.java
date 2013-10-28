@@ -1,5 +1,20 @@
 package com.mygame.game;
 
-public class main {
+import java.io.IOException;
 
+public class main {
+	public static void main (String[] args) throws IOException{
+		/*keyboardInput key = new keyboardInput();
+		key.keyboardin();*/
+		setup charsetup = new setup();
+		
+		while(1>0){
+			charsetup.name();
+			if(charsetup.nameconfirm() == 1 ){
+				break;
+			}
+		}
+
+
+	}
 }
