@@ -2,20 +2,29 @@ package com.mygame.game;
 
 import java.io.IOException;
 
+import com.mygame.stroy.start;
+
 public class main {
 	public static void main (String[] args) throws IOException{
 		/*keyboardInput key = new keyboardInput();
 		key.keyboardin();*/
-		setup charsetup = new setup();
 		properties prop = new properties();
+		start startGame = new start();
 		while(1>0){
-			charsetup.name();
-			if(charsetup.nameconfirm() == 1 ){
+			setup.getname();
+			if(setup.nameconfirm() == 1 ){
 				break;
 			}
 		}
-		charsetup.age();
-		
+		setup.age();
+		properties.stat();
+		while(1>0){
+			if(continues.continueNext() == 1 ){
+				break;
+			}
+			
+		}
+		start.introduction();
 		
 		
 

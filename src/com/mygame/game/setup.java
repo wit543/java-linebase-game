@@ -3,9 +3,10 @@ package com.mygame.game;
 import java.io.IOException;
 
 public class setup {
-	static String name;
+	public static String name;
+	
 
-	public static String name( ) throws IOException{
+	public static String getname( ) throws IOException{
 		System.out.println("whatyourname");
 		name = keyboardInput.keyboardInString();
 		return name;

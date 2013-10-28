@@ -26,4 +26,15 @@ public class keyboardInput {
 		return b;
 		
 	}
+	public static double keyboardAnyKey() throws IOException{
+		
+	     BufferedReader stdin =
+	             new BufferedReader (new
+	                 InputStreamReader(System.in));
+	     int a = stdin.read();
+	     
+		return a;
+		
+	}
+			
 }

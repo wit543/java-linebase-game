@@ -4,16 +4,20 @@ import java.io.IOException;
 
 public class properties {
 	public static double health = 100;
-	static double exp = 0;
-	static double difficulty = 1;
-	static double level = 0;
-	static double food = 100;
-	static double water = 100;
-	static double mood = 10;
-	static double comfort = 10;
-	static double money = 0;
-	static double time = 0;
+	public static double exp = 0;
+	public static double difficulty = 1;
+	public static double level = 0;
+	public static double food = 100;
+	public static double water = 100;
+	public static double mood = 10;
+	public static double comfort = 10;
+	public static double money = 0;
+	public static double time = 0;
 	public static String stat( ) throws IOException{
+		System.out.println("");
+		System.out.println("=======================");
+		System.out.println("        statistic      ");
+		System.out.println("=======================");
 		System.out.println("health = "+health);
 		System.out.println("exp = "+exp);
 		System.out.println("difficulty = "+difficulty);
