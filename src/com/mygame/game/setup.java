@@ -30,4 +30,27 @@ public class setup {
 		return age;
 		
 	}
+	public static void county() throws IOException{
+		double county;
+		System.out.println("chooe you county");
+		county =  keyboardInput.keyboardInInt();
+		return county;
+	}
+	public static void hair() throws IOException{
+		double hair-color;
+		System.out.println("what you hair color?");
+		System.out.println("black\gold\bronze\gray\blue\pink\yeloow\green")
+		System.out.println("or hexcode")
+		hair-color =  keyboardInput.keyboardInInt();
+		return hair-color;
+	}
+	public static void body() throws IOException{
+		double hair-color;
+		System.out.println("what you hair color?");
+		System.out.println("black\gold\bronze\gray\blue\pink\yeloow\green")
+		System.out.println("or hexcode")
+		body-color =  keyboardInput.keyboardInInt();
+		return body-color;
+	}
 }
+
