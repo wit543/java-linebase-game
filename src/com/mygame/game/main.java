@@ -29,8 +29,9 @@ public class main {
 		start.introduction();
 		*/
 
-		pictureCore.randomPicture();
-
+		//menu.menu();
+		
+		System.out.println(dictionary.yes(keyboardInput.keyboardInString()));
 		
 
 	}

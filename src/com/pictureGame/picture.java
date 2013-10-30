@@ -201,4 +201,5 @@ public class picture {
 		wrong.count();
 		
 	}
+	
 }

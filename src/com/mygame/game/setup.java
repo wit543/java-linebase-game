@@ -30,9 +30,9 @@ public class setup {
 		return age;
 		
 	}
-	public static void county() throws IOException{
+	public static void country() throws IOException{
 		
-		System.out.println("chooe you county");
+		System.out.println("chooe you country");
 		character.county =  keyboardInput.keyboardInString();
 		
 	}

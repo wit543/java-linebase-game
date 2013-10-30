@@ -5,7 +5,7 @@ public class wrong {
 	public static void count(){
 		if(wrongNumber == 3){
 			System.out.println("GAME OVER");
-			System.out.println("YOUR SCORE IS "+point.point);
+			
 			
 		}
 	}

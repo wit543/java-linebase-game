@@ -12,17 +12,17 @@ public class pictureCore {
 	static String[] pictures= {"window","tennis ball","pizza","paintbrush","pencil","ruler","truck","car"};
 	static List<String> used = new ArrayList<String>();
 	public static void randomPicture() throws IOException{
+		System.out.println("Picture Game start!!!");
 		for(int i=0;i<20;i++){
 			Random r = new Random();
 			String ran = pictures[r.nextInt(pictures.length)];
 			if(used.contains(ran)){
-			}
-			if(wrong.wrongNumber == 3){
-				break;			
-			}
+			}	
 			else{	
 				used.add(ran);
-				
+				if(wrong.wrongNumber == 3){
+					break;
+				}
 				if(ran.equals("window")){
 					picture.window();
 				}
@@ -45,9 +45,7 @@ public class pictureCore {
 					picture.car();
 				}
 			}
-
-			
 		}
-
+		point.finalPoint();
 	}
 }
