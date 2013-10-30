@@ -13,7 +13,7 @@ public class setup {
 	}
 	public static double nameconfirm() throws IOException{
 		 double confirm;
-		System.out.println("confirm(yes/no)");
+		System.out.println("Your name is "+name+" confirm(yes/no)");
 		if(new String(keyboardInput.keyboardInString()).equals("yes") ){
 			confirm = 1;
 		}
@@ -31,26 +31,26 @@ public class setup {
 		
 	}
 	public static void county() throws IOException{
-		double county;
+		
 		System.out.println("chooe you county");
-		county =  keyboardInput.keyboardInInt();
-		return county;
+		character.county =  keyboardInput.keyboardInString();
+		
 	}
 	public static void hair() throws IOException{
-		double hair-color;
+		
 		System.out.println("what you hair color?");
-		System.out.println("black\gold\bronze\gray\blue\pink\yeloow\green")
-		System.out.println("or hexcode")
-		hair-color =  keyboardInput.keyboardInInt();
-		return hair-color;
+		System.out.println("black/gold/bronze/gray/blue/pink/yeloow/green");
+		System.out.println("or hexcode");
+		character.hairColor =  keyboardInput.keyboardInString();
+		
 	}
 	public static void body() throws IOException{
-		double hair-color;
+		
 		System.out.println("what you hair color?");
-		System.out.println("black\gold\bronze\gray\blue\pink\yeloow\green")
-		System.out.println("or hexcode")
-		body-color =  keyboardInput.keyboardInInt();
-		return body-color;
+		System.out.println("black/gold/bronze/gray/blue/pink/yeloow/green");
+		System.out.println("or hexcode");
+		character.bodyColor =  keyboardInput.keyboardInString();
+		
 	}
 }
 

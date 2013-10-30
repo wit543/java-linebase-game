@@ -3,6 +3,8 @@ package com.mygame.game;
 import java.io.IOException;
 
 import com.mygame.stroy.start;
+import com.pictureGame.picture;
+import com.pictureGame.pictureCore;
 
 public class main {
 	public static void main (String[] args) throws IOException{
@@ -10,7 +12,7 @@ public class main {
 		key.keyboardin();*/
 		properties prop = new properties();
 		start startGame = new start();
-		while(1>0){
+		/*while(1>0){
 			setup.getname();
 			if(setup.nameconfirm() == 1 ){
 				break;
@@ -25,7 +27,10 @@ public class main {
 			
 		}
 		start.introduction();
-		
+		*/
+
+		pictureCore.randomPicture();
+
 		
 
 	}
