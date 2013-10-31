@@ -1,8 +1,16 @@
 package com.pictureGame;
 
-import java.io.IOException;
-
 import com.mygame.game.keyboardInput;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.LineNumberReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import static java.util.Arrays.asList;
+import java.util.List;
 
 public class picture {
 	public static void window() throws IOException{
@@ -202,26 +210,40 @@ public class picture {
 		
 	}
 		public static  void test() throws IOException{
-		static File file = new File("car.txt");
-		private static Scanner scanner;
-		scanner = new Scanner(file);
-		while (scanner.hasNextLine()) {
-		    String line = scanner.nextLine();
-		    if(line.equals(Input)) { 
-		        System.out.println(line);
-		    }
-		}
-		if(new String(keyboardInput.keyboardInString()).equals("car")){
-			System.out.println("Correct 1 point added");
-			point.point = point.point + 1;
-		}
-		else{
-			System.out.println("Wrong");
-			wrong.wrongNumber = wrong.wrongNumber + 1;
-		}
-		
-		wrong.count();
+                    String pic = "car";
+                    //int linecount = 0;
+                    File file;
+                     file = new File("car.txt");
+                    //LineNumberReader r = new LineNumberReader(new FileReader("car.txt"));
+                    Scanner scanner;
+                    scanner = new Scanner(file);
+                    while (scanner.hasNextLine()) {
+                    	String line = scanner.nextLine();
+                        if(line.equals(pic) /*&& linecount == 0*/ ) { 
+                        	while (scanner.hasNextLine()) {
+                        		//linecount = r.getLineNumber();
+                        		String line1 = scanner.nextLine();
+	                               if(line1.equals(pic)){
+	                            	   break;
+	                               }
+                            	System.out.println(line1);
+                        		}
+                               }
+                        	}
+                        
+
+                    if(new String(keyboardInput.keyboardInString()).equals("car")){
+                            System.out.println("Correct 1 point added");
+                            point.point = point.point + 1;
+                    }
+                    else{
+                            System.out.println("Wrong");
+                            wrong.wrongNumber = wrong.wrongNumber + 1;
+                    }
+
+                    wrong.count();
 		
 	}
+        
 	
 }

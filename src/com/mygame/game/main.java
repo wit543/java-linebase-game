@@ -31,8 +31,8 @@ public class main {
 
 		//menu.menu();
 		
-		System.out.println(dictionary.yes(keyboardInput.keyboardInString()));
-		
-
+		//System.out.println(dictionary.yes(keyboardInput.keyboardInString()));
+                
+		picture.test();
 	}
 }
