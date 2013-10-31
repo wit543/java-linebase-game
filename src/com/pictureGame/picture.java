@@ -201,5 +201,27 @@ public class picture {
 		wrong.count();
 		
 	}
+		public static  void test() throws IOException{
+		static File file = new File("car.txt");
+		private static Scanner scanner;
+		scanner = new Scanner(file);
+		while (scanner.hasNextLine()) {
+		    String line = scanner.nextLine();
+		    if(line.equals(Input)) { 
+		        System.out.println(line);
+		    }
+		}
+		if(new String(keyboardInput.keyboardInString()).equals("car")){
+			System.out.println("Correct 1 point added");
+			point.point = point.point + 1;
+		}
+		else{
+			System.out.println("Wrong");
+			wrong.wrongNumber = wrong.wrongNumber + 1;
+		}
+		
+		wrong.count();
+		
+	}
 	
 }
