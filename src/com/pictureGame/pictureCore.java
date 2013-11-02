@@ -16,7 +16,7 @@ import com.mygame.game.keyboardInput;
 
 public class pictureCore {
 	
-	static String[] pictures= {"window","tennis ball","pizza","paintbrush","pencil","ruler","truck","car"};
+	//static String[] pictures= {"window","tennis ball","pizza","paintbrush","pencil","ruler","truck","car"};
 	static Random r = new Random();
 	static String ran;
 	static List<String> picrandom = new ArrayList<String>();

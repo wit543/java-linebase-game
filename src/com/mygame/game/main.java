@@ -2,6 +2,7 @@ package com.mygame.game;
 
 import java.io.IOException;
 
+import com.chessGame.chessCore;
 import com.mygame.stroy.start;
 import com.pictureGame.picture;
 import com.pictureGame.pictureCore;
@@ -30,9 +31,9 @@ public class main {
 		*/
 
 		//menu.menu();
-		pictureCore.randomPicture();
+		//pictureCore.randomPicture();
 		//System.out.println(dictionary.yes(keyboardInput.keyboardInString()));
-                
+        chessCore.startchess();        
 		//picture.test();
 	}
 }

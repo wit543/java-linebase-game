@@ -219,8 +219,7 @@ public class picture {
                     System.out.println(pic);
                     scanner = new Scanner(file);
                     while (scanner.hasNextLine()) {
-                    	String line = scanner.nextLine();
-                    	
+                    	String line = scanner.nextLine();                    	
                         if(line.equals(pic) /*&& linecount == 0*/ ) { 
                         	while (scanner.hasNextLine()) {
                         		//linecount = r.getLineNumber();
