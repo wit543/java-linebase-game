@@ -35,14 +35,13 @@ public class grid {
 		gridlayout[7][5] = chess.bishop_white;
 		gridlayout[7][6] = chess.knight_white;
 		gridlayout[7][7] = chess.rook_white;;
-		gridlayout[6][0] = chess.pawn_black;
-		gridlayout[6][1] = chess.pawn_black;
-		gridlayout[6][2] = chess.pawn_black;
-		gridlayout[6][3] = chess.pawn_black;
-		gridlayout[6][4] = chess.pawn_black;
-		gridlayout[6][5] = chess.pawn_black;
-		gridlayout[6][6] = chess.pawn_black;
-		gridlayout[6][7] = chess.pawn_black;
-
+		gridlayout[6][0] = chess.pawn_white;
+		gridlayout[6][1] = chess.pawn_white;
+		gridlayout[6][2] = chess.pawn_white;
+		gridlayout[6][3] = chess.pawn_white;
+		gridlayout[6][4] = chess.pawn_white;
+		gridlayout[6][5] = chess.pawn_white;
+		gridlayout[6][6] = chess.pawn_white;
+		gridlayout[6][7] = chess.pawn_white;
 	}
 }

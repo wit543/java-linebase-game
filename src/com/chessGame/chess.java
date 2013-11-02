@@ -8,7 +8,7 @@ public class chess {
 	public static String rook_black ="♜";
 	public static String pawn_black ="♟";
 	public static String king_white ="♚";
-	public static String queen_white ="♕";
+	public static String queen_white ="♛";
 	public static String knight_white ="♘";
 	public static String bishop_white ="♗";
 	public static String rook_white ="♖";
