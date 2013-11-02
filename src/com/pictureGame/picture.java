@@ -13,14 +13,14 @@ import static java.util.Arrays.asList;
 import java.util.List;
 
 public class picture {
-	public static void window() throws IOException{
-		/*
+	/*public static void window() throws IOException{
+		
 		         _.-;;-._
           '-..-'|   ||   |
           '-..-'|_.-;;-._|
           '-..-'|   ||   |
  		  '-..-'|_.-''-._|
- 		  */
+ 		  
 		System.out.println("       _.-;;-._");
 		System.out.println("'-..-'|   ||   |");
 		System.out.println("'-..-'|_.-;;-._|");
@@ -39,13 +39,13 @@ public class picture {
 		
 	}
 	public static  void tennisBall() throws IOException{
-		/*
+		
 		     ,-"""-.
             /\     /\
             | |   | |
             \/     \/
          	 '-...-'
- 		  */
+ 		  
 		System.out.println("  ,-\"\"\"-.");
 		System.out.println(" /\\     /\\");
 		System.out.println(" | |   | |");
@@ -65,13 +65,13 @@ public class picture {
 		
 	}
 	public static  void pizza() throws IOException{
-		/*
+		
                // ""--.._
               ||  (_)  _ "-._
               ||    _ (_)    '-.
               ||   (_)   __..-'
                \\__..--""
- 		  */
+ 		  
 		System.out.println(" // \"\"--.._");
 		System.out.println("||  (_)  _ \"-._");
 		System.out.println("||    _ (_)    '-.");
@@ -91,12 +91,12 @@ public class picture {
 		
 	}
 	public static  void paintbrush() throws IOException{
-		/*
+		
               .------------------....___       ,;;;,
              /                      /  /'''---/;;;;;;,.,
              \                      \__\...---\;;;;;;;"
               '------------------''''           ````
- 		  */
+ 		  
 		System.out.println(" .------------------....___       ,;;;,");
 		System.out.println("/                      /  /'''---/;;;;;;,.,");
 		System.out.println("\\                      \\__\\...---\\;;;;;;;\"");
@@ -115,11 +115,11 @@ public class picture {
 		
 	}
 	public static  void pencil() throws IOException{
-		/*		_______________________
+				_______________________
                 /   //=================/`"-._
           	   |   ||=================|      D
       		    \___\\_________________\__.-"
- 		  */
+ 		  
 		System.out.println("  _______________________");
 		System.out.println(" /   //=================/`\"-._");
 		System.out.println("|   ||=================|      D");
@@ -139,11 +139,11 @@ public class picture {
 		
 	}
 	public static  void ruler() throws IOException{
-		/*
+		
          _________________________________________________
          |'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|
          |___1___2___3___4___5___6___7___8___9__10__11__12_|
- 		  */
+ 		  
 		System.out.println(" _________________________________________________");
 		System.out.println("|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|'|");
 		System.out.println("|___1___2___3___4___5___6___7___8___9__10__11__12_|");
@@ -161,14 +161,14 @@ public class picture {
 		
 	}
 	public static  void truck() throws IOException{
-		/*
+		
                    _________________
            .--H--.|                 |
          _//_||  ||                 |
         [    -|  |'--;--------------'
         '-()-()----()"()^^^^^^^()"()'
 
- 		  */
+ 		  
 		System.out.println("           _________________");
 		System.out.println("   .--H--.|                 |");
 		System.out.println(" _//_||  ||                 |");
@@ -188,11 +188,11 @@ public class picture {
 		
 	}
 	public static  void car() throws IOException{
-		/*                ___
+		              ___
                .--.      [ATM]
           .----'   '--.    |
           '-()-----()-'    |
- 		  */
+ 		
 		System.out.println("     .--.    ");
 		System.out.println(".----'   '--.");
 		System.out.println("'-()-----()-'    |");
@@ -208,22 +208,24 @@ public class picture {
 		
 		wrong.count();
 		
-	}
+	}*/
 		public static  void test() throws IOException{
-                    String pic = "car";
+                    String pic = pictureCore.ran;
                     //int linecount = 0;
                     File file;
-                     file = new File("car.txt");
+                     file = new File("pic.txt");
                     //LineNumberReader r = new LineNumberReader(new FileReader("car.txt"));
                     Scanner scanner;
+                    System.out.println(pic);
                     scanner = new Scanner(file);
                     while (scanner.hasNextLine()) {
                     	String line = scanner.nextLine();
+                    	
                         if(line.equals(pic) /*&& linecount == 0*/ ) { 
                         	while (scanner.hasNextLine()) {
                         		//linecount = r.getLineNumber();
                         		String line1 = scanner.nextLine();
-	                               if(line1.equals(pic)){
+	                               if(line1.equals(pic)){ 
 	                            	   break;
 	                               }
                             	System.out.println(line1);
@@ -232,7 +234,7 @@ public class picture {
                         	}
                         
 
-                    if(new String(keyboardInput.keyboardInString()).equals("car")){
+                    if(new String(keyboardInput.keyboardInString()).equals(pictureCore.ran)){
                             System.out.println("Correct 1 point added");
                             point.point = point.point + 1;
                     }

@@ -30,9 +30,9 @@ public class main {
 		*/
 
 		//menu.menu();
-		
+		pictureCore.randomPicture();
 		//System.out.println(dictionary.yes(keyboardInput.keyboardInString()));
                 
-		picture.test();
+		//picture.test();
 	}
 }
