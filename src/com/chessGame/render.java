@@ -25,7 +25,7 @@ public class render {
        System.out.println("2 ║ "+grid.gridlayout[1][0]+grid.gridlayout[1][1]+grid.gridlayout[1][2]+grid.gridlayout[1][3]+grid.gridlayout[1][4]+grid.gridlayout[1][5]+grid.gridlayout[1][6]+grid.gridlayout[1][7]);     
        System.out.println("1 ║ "+grid.gridlayout[0][0]+grid.gridlayout[0][1]+grid.gridlayout[0][2]+grid.gridlayout[0][3]+grid.gridlayout[0][4]+grid.gridlayout[0][5]+grid.gridlayout[0][6]+grid.gridlayout[0][7]);     
        System.out.println("  ╚════════════════════");    
-       System.out.println("    A B C D E F G");     
+       System.out.println("    A B C D E F G H");     
 
 
            
