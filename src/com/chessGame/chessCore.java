@@ -10,8 +10,13 @@ public class chessCore {
 		render.pagerefresh();
 		while(1>0){
 		chessTranslator.StringToCode(chessInput.keyboardInString());
-		chessMove.move();
-		render.pagerefresh();
+		if(chess.chessCheck() == 1){
+			chessMove.move();
+			render.pagerefresh();
+			}
+		else{
+			System.out.println("invalid move");
+		}
 		}
 	}
 }
