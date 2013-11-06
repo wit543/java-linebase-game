@@ -17,14 +17,14 @@ public class grid {
 		gridlayout[0][5] = chess.bishop_black;
 		gridlayout[0][6] = chess.knight_black;
 		gridlayout[0][7] = chess.rook_black;
-		gridlayout[1][0] = chess.pawn_black;
-		gridlayout[1][1] = chess.pawn_black;
-		gridlayout[1][2] = chess.pawn_black;
-		gridlayout[1][3] = chess.pawn_black;
-		gridlayout[1][4] = chess.pawn_black;
-		gridlayout[1][5] = chess.pawn_black;
-		gridlayout[1][6] = chess.pawn_black;
-		gridlayout[1][7] = chess.pawn_black;
+		gridlayout[1][0] = chess.pawn_black1;
+		gridlayout[1][1] = chess.pawn_black2;
+		gridlayout[1][2] = chess.pawn_black3;
+		gridlayout[1][3] = chess.pawn_black4;
+		gridlayout[1][4] = chess.pawn_black5;
+		gridlayout[1][5] = chess.pawn_black6;
+		gridlayout[1][6] = chess.pawn_black7;
+		gridlayout[1][7] = chess.pawn_black8;
 		
 		
 		gridlayout[7][0] = chess.rook_white;
@@ -35,13 +35,13 @@ public class grid {
 		gridlayout[7][5] = chess.bishop_white;
 		gridlayout[7][6] = chess.knight_white;
 		gridlayout[7][7] = chess.rook_white;;
-		gridlayout[6][0] = chess.pawn_white;
-		gridlayout[6][1] = chess.pawn_white;
-		gridlayout[6][2] = chess.pawn_white;
-		gridlayout[6][3] = chess.pawn_white;
-		gridlayout[6][4] = chess.pawn_white;
-		gridlayout[6][5] = chess.pawn_white;
-		gridlayout[6][6] = chess.pawn_white;
-		gridlayout[6][7] = chess.pawn_white;
+		gridlayout[6][0] = chess.pawn_white1;
+		gridlayout[6][1] = chess.pawn_white2;
+		gridlayout[6][2] = chess.pawn_white3;
+		gridlayout[6][3] = chess.pawn_white4;
+		gridlayout[6][4] = chess.pawn_white5;
+		gridlayout[6][5] = chess.pawn_white6;
+		gridlayout[6][6] = chess.pawn_white7;
+		gridlayout[6][7] = chess.pawn_white8;
 	}
 }

@@ -8,6 +8,10 @@ public class chessCore {
 	public static void startchess() throws IOException{
 		grid.gridreset();
 		render.pagerefresh();
+		while(1>0){
 		chessTranslator.StringToCode(chessInput.keyboardInString());
+		chessMove.move();
+		render.pagerefresh();
+		}
 	}
 }

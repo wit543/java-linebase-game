@@ -33,7 +33,35 @@ public class main {
 		//menu.menu();
 		//pictureCore.randomPicture();
 		//System.out.println(dictionary.yes(keyboardInput.keyboardInString()));
-        chessCore.startchess();        
+        //chessCore.startchess();        
 		//picture.test();
+		String[][] g = new String[8][8];
+		int x=3;
+		int y=3;
+		/*for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				if(i==j || 7-j==i){
+				System.out.print("X");
+				}
+				else{
+				System.out.print("O");
+				}
+			}
+			System.out.println();
+		}*/
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				if((((i==x+2 && j==y+1)||(i==x+2 && j==y-1))||((i==x-2 && j==y+1)||(i==x-2 && j==y-1)))||(((i==x+1 && j==y+2)||(i==x+1 && j==y-2))||((i==x-1 && j==y+2)||(i==x-1 && j==y-2)))){
+					System.out.print("X");
+				}
+				/*if((i==x) && (j==y)){
+					System.out.print("X");
+				}*/
+				else{
+				System.out.print("O");
+				}
+			}
+			System.out.println();
+		}
 	}
 }
