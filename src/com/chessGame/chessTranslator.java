@@ -10,7 +10,7 @@ public class chessTranslator {
 	public static int InttoX;
 	public static int InttoY;
 	public static void StringToCode(String Input){
-		String[] parts = Input.split("    ");
+		String[] parts = Input.split(" ");
 		String part1 = parts[0];
 		String part2 = parts[1];
 		//System.out.println(part1);
@@ -29,6 +29,7 @@ public class chessTranslator {
 		InttoY = 0;
 
                 String[] out = {" ","a","b","c","d","e","f","g","h"};
+
                 /*for(int i=0;i<8;i++){
                     if("a".equals(fromY)){
                        IntfromY = 1;
@@ -77,9 +78,9 @@ public class chessTranslator {
 		//System.out.println(fromY);
 		//System.out.println(toX);
 		//System.out.println(toY);
-		System.out.println(IntfromX);
-		System.out.println(IntfromY);
-		System.out.println(InttoX);
-		System.out.println(InttoY);
+		//System.out.println(IntfromX);
+		//System.out.println(IntfromY);
+		//System.out.println(InttoX);
+		//System.out.println(InttoY);
 	}
 }

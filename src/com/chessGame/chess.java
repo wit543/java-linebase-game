@@ -1,6 +1,13 @@
 package com.chessGame;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class chess {
+	public static String space = "    ";
+	static List<String> black = new ArrayList<String>(Arrays.asList("♜","♞","♝","♛","♚","♟"));
+	static List<String> white = new ArrayList<String>(Arrays.asList("♖","♘","♗","♕","♔","♙"));
 	public static String king_black ="♚";
 	public static String queen_black ="♛";
 	public static String knight_black ="♞";
@@ -47,23 +54,36 @@ public class chess {
 		if(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]== queen_black ||grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]== queen_white){
 			chess.queen();
 		}
-		/*if(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]== knight_black ||grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]== knight_white){
-			chess.knight();
-		}*/
+		if(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]== "♟" ||grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]== "♙"){
+			chess.pawn();
+		}
 		return check;
 	}
 	public static void pawn(){
-		if( chessTranslator.InttoX - chessTranslator.IntfromX == 1){
-			check =1;
+		if((chessTranslator.InttoX - chessTranslator.IntfromX == 1)&&(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]==space)){
+			if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+
+			}else{
+				check =1;
+			}
 		}
-		if( (chessTranslator.InttoX == 4) && (chessTranslator.IntfromX <3) && (grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]==pawn_black1 ) ){
-			check =1;
+		if( (((chessTranslator.InttoX == 3) && (chessTranslator.IntfromX <3) && (grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]=="♟"))||((chessTranslator.InttoX == 4) && (chessTranslator.IntfromX >4) && (grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]=="♙")))&&(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]==space)){
+			if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+
+			}else{
+				check =1;
+			}
 		}
 
-		if( (chessTranslator.InttoY - chessTranslator.IntfromY ==1 )&&(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY] != "    ") ){
-			check =1;
+		if( (Math.abs(chessTranslator.InttoY - chessTranslator.IntfromY) ==1)&&(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY] != space)){
+			if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+
+			}else{
+				check =1;
+			}
 		}
 		else{
+			check =0;
 		}
 	}
 	
@@ -73,10 +93,14 @@ public class chess {
 			((chessTranslator.InttoX == chessTranslator.IntfromX-2 && chessTranslator.InttoY== chessTranslator.IntfromY+1)||(chessTranslator.InttoX == chessTranslator.IntfromX-2 && chessTranslator.InttoY== chessTranslator.IntfromY-1)))||
 			(((chessTranslator.InttoX == chessTranslator.IntfromX+1 && chessTranslator.InttoY== chessTranslator.IntfromY+2)||(chessTranslator.InttoX == chessTranslator.IntfromX+1 && chessTranslator.InttoY== chessTranslator.IntfromY-2))||
 			((chessTranslator.InttoX == chessTranslator.IntfromX-1 && chessTranslator.InttoY== chessTranslator.IntfromY+2)||(chessTranslator.InttoX == chessTranslator.IntfromX-1 && chessTranslator.InttoY== chessTranslator.IntfromY-2)))){
-			check =1;	
+			if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+
+			}else{
+				check =1;
+			}	
 		}
 		else{
-			
+			check =0;
 		}
 	}
 	public static void bishop(){
@@ -106,10 +130,70 @@ public class chess {
 			System.out.println();
 		}*/
 		if((Math.abs(chessTranslator.IntfromX-chessTranslator.IntfromY)==Math.abs(chessTranslator.InttoX-chessTranslator.InttoY))||(Math.abs(chessTranslator.IntfromX+chessTranslator.IntfromY)==Math.abs(chessTranslator.InttoX+chessTranslator.InttoY))){
-			check =1;
+			//if(chessTranslator.IntfromX-chessTranslator.IntfromY ==chessTranslator.InttoX-chessTranslator.InttoY){
+				check =0;
+				//System.out.println(chessTranslator.InttoX-chessTranslator.IntfromX);
+				//System.out.println(chessTranslator.InttoY-chessTranslator.IntfromY);
+				int countX =(chessTranslator.InttoX-chessTranslator.IntfromX);
+				
+				int count = 0;
+				String[] inbetween =  {space,space,space,space,space,space,space,space};
+				
+				if((chessTranslator.InttoX-chessTranslator.IntfromX<0)&&(chessTranslator.InttoY-chessTranslator.IntfromY<0)){
+					while(count < Math.abs(countX)){
+						count ++;
+						inbetween[count] = grid.gridlayout[chessTranslator.IntfromX-count][chessTranslator.IntfromY-count];
+					}	
+				}
+				if((chessTranslator.InttoX-chessTranslator.IntfromX<0)&&(chessTranslator.InttoY-chessTranslator.IntfromY>0)){
+					while(count < Math.abs(countX)){
+						count ++;
+						inbetween[count] = grid.gridlayout[chessTranslator.IntfromX-count][chessTranslator.IntfromY+count];
+					}	
+				}
+				if((chessTranslator.InttoX-chessTranslator.IntfromX>0)&&(chessTranslator.InttoY-chessTranslator.IntfromY<0)){
+					while(count <countX){
+						count ++;
+						inbetween[count] = grid.gridlayout[chessTranslator.IntfromX+count][chessTranslator.IntfromY-count];
+					}	
+				}
+				if((chessTranslator.InttoX-chessTranslator.IntfromX>0)&&(chessTranslator.InttoY-chessTranslator.IntfromY>0)){
+					while(count <countX){
+						count ++;
+						inbetween[count] = grid.gridlayout[chessTranslator.IntfromX+count][chessTranslator.IntfromY+count];
+					}	
+				}
+				String checking;
+				for(int i=0;i<8;i++){
+					System.out.println("ok");
+					System.out.println(inbetween[i]);
+					if(inbetween[i]!= space){
+						checking = inbetween[i];
+						System.out.println(checking);
+						if(checking == grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]){
+							if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+								System.out.println("ok2");
+								System.out.println(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]);
+							}else{
+								System.out.println("ok3");
+								check =1;
+								
+							}
+
+						}
+						break;
+					}
+
+				}
+				
+
+				
+				//dl
+			
+
 		}
 		else{
-			
+			check =0;
 		}
 	}
 	public static void rook(){

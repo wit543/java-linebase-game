@@ -6,12 +6,12 @@ public class grid {
 	public static void gridreset(){
 		for(int i=0;i<8;i++){
 			for(int j=0;j<8;j++){
-				gridlayout[i][j] = " ";
+				gridlayout[i][j] =chess.space;
 			}
 		}
 		gridlayout[0][0] = chess.rook_black;
 		gridlayout[0][1] = chess.knight_black;
-		gridlayout[0][2] = chess.bishop_black;
+		gridlayout[3][3] = chess.bishop_black;
 		gridlayout[0][3] = chess.queen_black;
 		gridlayout[0][4] = chess.king_black;
 		gridlayout[0][5] = chess.bishop_black;
