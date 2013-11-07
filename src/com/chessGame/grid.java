@@ -9,7 +9,7 @@ public class grid {
 				gridlayout[i][j] =chess.space;
 			}
 		}
-		gridlayout[0][0] = chess.rook_black;
+		gridlayout[5][3] = chess.rook_black;
 		gridlayout[0][1] = chess.knight_black;
 		gridlayout[3][3] = chess.bishop_black;
 		gridlayout[0][3] = chess.queen_black;

@@ -165,17 +165,15 @@ public class chess {
 				}
 				String checking;
 				for(int i=0;i<8;i++){
-					System.out.println("ok");
-					System.out.println(inbetween[i]);
+					//System.out.println("ok");
+					//System.out.println(inbetween[i]);
 					if(inbetween[i]!= space){
 						checking = inbetween[i];
-						System.out.println(checking);
+						//System.out.println(checking);
 						if(checking == grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]){
 							if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
-								System.out.println("ok2");
-								System.out.println(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]);
-							}else{
-								System.out.println("ok3");
+								}else{
+								//System.out.println("ok3");
 								check =1;
 								
 							}
@@ -186,11 +184,6 @@ public class chess {
 
 				}
 				
-
-				
-				//dl
-			
-
 		}
 		else{
 			check =0;
@@ -198,7 +191,55 @@ public class chess {
 	}
 	public static void rook(){
 		if(chessTranslator.IntfromX==chessTranslator.InttoX || chessTranslator.IntfromY==chessTranslator.InttoY){
-			check =1;
+			int x= chessTranslator.InttoX-chessTranslator.IntfromX;
+			int y= chessTranslator.InttoY-chessTranslator.IntfromY;
+			String[] inbetween =  new String[8] ;
+			int count = 0;
+			if(x>0){
+				while(count <Math.abs(x)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX+count][chessTranslator.IntfromY];
+				}	
+			}
+			if(x<0){
+				while(count <Math.abs(x)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX-count][chessTranslator.IntfromY];
+				}	
+			}
+			if(y>0){
+				while(count <Math.abs(y)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY+count];
+				}	
+			}
+			if(y<0){
+					while(count <Math.abs(y)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY-count];
+				}	
+			}
+			String checking;
+			for(int i=1;i<8;i++){
+				//System.out.println("ok");
+				System.out.println(inbetween[i]);
+				if(inbetween[i]== null){
+					checking = inbetween[i-1];
+					System.out.println("ok");
+					System.out.println(checking);
+					if((checking == grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])){
+						if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+							}else{
+							//System.out.println("ok3");
+							check =1;
+							
+						}
+
+					}
+					break;
+				}
+			
+			}
 		}
 		else{
 			
