@@ -167,6 +167,14 @@ public class chess {
 				for(int i=0;i<8;i++){
 					//System.out.println("ok");
 					//System.out.println(inbetween[i]);
+					if(inbetween[i]== space && inbetween[i]==grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]){
+						if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+						}else{
+						//System.out.println("ok3");
+						check =1;
+						
+					}
+					}
 					if(inbetween[i]!= space){
 						checking = inbetween[i];
 						//System.out.println(checking);
@@ -193,7 +201,7 @@ public class chess {
 		if(chessTranslator.IntfromX==chessTranslator.InttoX || chessTranslator.IntfromY==chessTranslator.InttoY){
 			int x= chessTranslator.InttoX-chessTranslator.IntfromX;
 			int y= chessTranslator.InttoY-chessTranslator.IntfromY;
-			String[] inbetween =  new String[8] ;
+			String[] inbetween =  {space,space,space,space,space,space,space,space};
 			int count = 0;
 			if(x>0){
 				while(count <Math.abs(x)){
@@ -223,18 +231,57 @@ public class chess {
 			for(int i=1;i<8;i++){
 				//System.out.println("ok");
 				System.out.println(inbetween[i]);
-				if(inbetween[i]== null){
-					checking = inbetween[i-1];
-					System.out.println("ok");
-					System.out.println(checking);
-					if((checking == grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])){
-						if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
-							}else{
-							//System.out.println("ok3");
-							check =1;
-							
-						}
 
+				int h=0;
+				int t=1;
+				int d=0;
+				for (d=0;d<8;d++){
+					if(white.contains(inbetween[d])||black.contains(inbetween[d])){
+						h++;
+					}
+				}
+				//System.out.println(h);
+				//System.out.println(Math.abs(y));
+				if(inbetween[i]== space && inbetween[i]==grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY] &&h==0){
+					for (d=0;d<8;d++){
+						if(white.contains(inbetween[d])||black.contains(inbetween[d])){
+							h++;
+						}
+					}
+					if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+					}else{
+					//System.out.println("ok3");
+					check =1;
+					}
+				}
+				if(inbetween[i]!= space){
+					checking = inbetween[i];
+					//System.out.println("ok");
+					System.out.println(checking);
+					for (d=0;d<8;d++){
+						if(white.contains(inbetween[d])||black.contains(inbetween[d])){
+							h++;
+						}
+					}
+					if((checking == grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])){
+						//System.out.println();
+						/*for(t=1;t<x;t++){
+							
+							System.out.println(t);
+							if(inbetween[i-t] != space){
+							h++;
+							}
+						}*/
+						System.out.println("ok");
+						
+						if((h==Math.abs(y)+1||h==Math.abs(x)+1)&&(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]!= space)){
+								if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+									}else{
+									//System.out.println("ok3");
+									check =1;
+									
+								}
+						}
 					}
 					break;
 				}
