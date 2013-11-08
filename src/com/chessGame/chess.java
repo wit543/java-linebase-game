@@ -302,10 +302,145 @@ public class chess {
 	}
 	public static void queen(){
 		if(chessTranslator.IntfromX==chessTranslator.InttoX || chessTranslator.IntfromY==chessTranslator.InttoY || (Math.abs(chessTranslator.IntfromX-chessTranslator.IntfromY)==Math.abs(chessTranslator.InttoX-chessTranslator.InttoY))||(Math.abs(chessTranslator.IntfromX+chessTranslator.IntfromY)==Math.abs(chessTranslator.InttoX+chessTranslator.InttoY))){
-			check =1;
+			
+			int countX =(chessTranslator.InttoX-chessTranslator.IntfromX);
+			
+			int count = 0;
+			String[] inbetween =  {space,space,space,space,space,space,space,space};
+			if((Math.abs(chessTranslator.IntfromX-chessTranslator.IntfromY)==Math.abs(chessTranslator.InttoX-chessTranslator.InttoY))||(Math.abs(chessTranslator.IntfromX+chessTranslator.IntfromY)==Math.abs(chessTranslator.InttoX+chessTranslator.InttoY))){
+
+			if((chessTranslator.InttoX-chessTranslator.IntfromX<0)&&(chessTranslator.InttoY-chessTranslator.IntfromY<0)){
+				while(count < Math.abs(countX)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX-count][chessTranslator.IntfromY-count];
+				}	
+			}
+			if((chessTranslator.InttoX-chessTranslator.IntfromX<0)&&(chessTranslator.InttoY-chessTranslator.IntfromY>0)){
+				while(count < Math.abs(countX)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX-count][chessTranslator.IntfromY+count];
+				}	
+			}
+			if((chessTranslator.InttoX-chessTranslator.IntfromX>0)&&(chessTranslator.InttoY-chessTranslator.IntfromY<0)){
+				while(count <countX){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX+count][chessTranslator.IntfromY-count];
+				}	
+			}
+			if((chessTranslator.InttoX-chessTranslator.IntfromX>0)&&(chessTranslator.InttoY-chessTranslator.IntfromY>0)){
+				while(count <countX){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX+count][chessTranslator.IntfromY+count];
+				}	
+			}
+			String checking;
+			for(int i=0;i<8;i++){
+				//System.out.println("ok");
+				//System.out.println(inbetween[i]);
+				if(inbetween[i]== space && inbetween[i]==grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]){
+					if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+					}else{
+					//System.out.println("ok3");
+					check =1;
+					
+				}
+				}
+				if(inbetween[i]!= space){
+					checking = inbetween[i];
+					//System.out.println(checking);
+					if(checking == grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]){
+						if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+							}else{
+							//System.out.println("ok3");
+							check =1;
+							
+						}
+
+					}
+					break;
+				}
+			}
+			}
+			if(chessTranslator.IntfromX==chessTranslator.InttoX || chessTranslator.IntfromY==chessTranslator.InttoY){
+			String checking;
+			int x= chessTranslator.InttoX-chessTranslator.IntfromX;
+			int y= chessTranslator.InttoY-chessTranslator.IntfromY;
+			if(x>0){
+				while(count <Math.abs(x)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX+count][chessTranslator.IntfromY];
+				}	
+			}
+			if(x<0){
+				while(count <Math.abs(x)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX-count][chessTranslator.IntfromY];
+				}	
+			}
+			if(y>0){
+				while(count <Math.abs(y)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY+count];
+				}	
+			}
+			if(y<0){
+					while(count <Math.abs(y)){
+					count ++;
+					inbetween[count] = grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY-count];
+				}	
+			}
+			
+			for(int i=1;i<8;i++){
+				//System.out.println("ok");
+				
+				check = 0;
+				int h=0;
+				int t=1;
+				int d=0;
+
+				for (d=0;d<8;d++){
+					if(white.contains(inbetween[d])||black.contains(inbetween[d])){
+						h++;
+					}
+				}
+				//System.out.println(h);
+				if(inbetween[i]== space && inbetween[i]==grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY] &&h==0){
+					//System.out.println("ok0");
+					//System.out.println(h);
+					if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+					}else{
+					//System.out.println("ok3");
+					check =1;
+					}
+					break;
+				}
+				if((inbetween[i]!= space)&&grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]!=space){
+					checking = inbetween[i];
+					//System.out.println("ok");
+					//System.out.println(checking);
+
+					if((checking == grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])){
+
+						//System.out.println("ok");
+						
+						if((h==Math.abs(y)+1||h==Math.abs(x)+1)&&(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY]!= space)){
+							//System.out.println("ok");
+								if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+									}else{
+									//System.out.println("ok3");
+									check =1;
+									
+								}
+						}
+					}
+					break;
+				}
+		
+			}
 		}
 		else{
 			
+		}
 		}
 	}
 }
