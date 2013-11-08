@@ -23,7 +23,7 @@ public class chess {
 	public static String pawn_black8 ="♟";
 	
 	
-	public static String king_white ="♚";
+	public static String king_white ="♔";
 	public static String queen_white ="♕";
 	public static String knight_white ="♘";
 	public static String bishop_white ="♗";
@@ -294,10 +294,11 @@ public class chess {
 	}
 	public static void king(){
 		if(Math.abs(chessTranslator.InttoX - chessTranslator.IntfromX) == 1 || Math.abs(chessTranslator.IntfromY-chessTranslator.InttoY )==1){
+			if(((black.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(black.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))||((white.contains(grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY]))&&(white.contains(grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY])))){
+			}else{
+			//System.out.println("ok3");
 			check =1;
-		}
-		else{
-			
+			}
 		}
 	}
 	public static void queen(){
@@ -441,6 +442,27 @@ public class chess {
 		else{
 			
 		}
+		}
+	}
+	public static int whiteDie =0;
+	public static int blackDie =0;
+	public static void winner(){
+		whiteDie =0;
+		blackDie =0;
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				if(grid.gridlayout[i][j]=="♔"){
+					whiteDie++;
+				}
+
+			}
+		}
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				if(grid.gridlayout[i][j]=="♚"){
+					blackDie++;
+				}
+			}
 		}
 	}
 }
