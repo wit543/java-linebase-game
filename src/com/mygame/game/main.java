@@ -9,6 +9,8 @@ import com.mygame.stroy.start;
 import com.pictureGame.picture;
 import com.pictureGame.pictureCore;
 
+import connectFour.connectFourCore;
+
 public class main {
 	public static void main (String[] args) throws IOException{
 		/*keyboardInput key = new keyboardInput();
@@ -67,8 +69,8 @@ public class main {
 			}
 			System.out.println();
 		}*/
-		chessCore.startchess();
-		
+		//chessCore.startchess();
+		connectFourCore.start();
 
 	}
 }
