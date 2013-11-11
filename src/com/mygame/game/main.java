@@ -69,8 +69,8 @@ public class main {
 			}
 			System.out.println();
 		}*/
-		//chessCore.startchess();
-		connectFourCore.start();
+		chessCore.startchess();
+		//connectFourCore.start();
 
 	}
 }

@@ -22,7 +22,7 @@ public class dot {
 	}
 	public static int check(int inputx, int inputy){
 		//System.out.println(inputx);
-		//System.out.println(inputy); 
+		System.out.println(inputy); 
 		//System.out.println(connectFourGrid.gridStandard[inputx-1][inputy]); 
 		int check =0;
 		String[] a = new String[7];
@@ -33,12 +33,18 @@ public class dot {
 		for(int i =0;i<inputy&&i<4;i++){
 
 			if(connectFourGrid.gridStandard[inputx-1][inputy] == connectFourGrid.gridStandard[inputx-1][inputy-i] ){
-				check ++;
-
-				
+				if(connectFourGrid.gridStandard[inputx-1][inputy] == connectFourGrid.gridStandard[inputx-1][inputy-i] ){
+					
+					System.out.println(connectFourGrid.gridStandard[inputx-1][inputy]);
+					System.out.println(connectFourGrid.gridStandard[inputx-1][inputy-i]);
+					System.out.println(inputy-i); 
+					check ++;
+				}
 				
 			}
 		}
+		
+
 		/*for(int i = 0;i<4;i++){
 			if(i==inputx ||i ==inputy||i ==6-inputy){
 				break;
