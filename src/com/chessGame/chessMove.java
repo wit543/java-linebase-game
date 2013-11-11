@@ -6,6 +6,6 @@ public class chessMove {
 		
 		grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY] = chessmove;
 		//grid.gridlayout[chessTranslator.InttoX][chessTranslator.InttoY] = grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY];
-		grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY] = "    ";
+		grid.gridlayout[chessTranslator.IntfromX][chessTranslator.IntfromY] = chess.space;
 	}
 }
