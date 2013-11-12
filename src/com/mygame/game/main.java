@@ -1,10 +1,14 @@
 package com.mygame.game;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.chessGame.chessCore;
+import com.chessGame.renderJFrame;
 import com.mygame.stroy.start;
 import com.pictureGame.picture;
 import com.pictureGame.pictureCore;
@@ -15,9 +19,9 @@ public class main {
 	public static void main (String[] args) throws IOException{
 		/*keyboardInput key = new keyboardInput();
 		key.keyboardin();*/
-		properties prop = new properties();
+		/*properties prop = new properties();
 		start startGame = new start();
-		/*while(1>0){
+		while(1>0){
 			setup.getname();
 			if(setup.nameconfirm() == 1 ){
 				break;
@@ -71,6 +75,10 @@ public class main {
 		}*/
 		chessCore.startchess();
 		//connectFourCore.start();
+	   //renderJFrame.renderJFrame();
+
+
+     
 
 	}
 }

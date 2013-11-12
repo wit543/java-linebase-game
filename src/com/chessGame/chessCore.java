@@ -10,11 +10,11 @@ public class chessCore {
 		render.pagerefresh();
 		while(1>0){
 		chessTranslator.StringToCode(chessInput.keyboardInString());
-		if(chess.chessCheck() == 1){
+		if(check.chessCheck() == 1){
 			chessMove.move();
 			
 			render.pagerefresh();
-			chess.winner();
+			check.checkWinner();
 			if(chess.whiteDie == 0 || chess.blackDie == 0){
 				if(chess.whiteDie == 0){
 				System.out.println("WINNER IS BLACK");
@@ -31,4 +31,5 @@ public class chessCore {
 		
 		}
 	}
+
 }
